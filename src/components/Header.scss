@@ -1,0 +1,80 @@
+.navbar{
+    border-bottom: 1px solid var(--border-main);
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        .menu{
+            display: none;
+            user-select: none;
+
+            img{
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .product-name{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            span{
+                font-family: "Barlow Condensed", sans-serif;
+                color: var(--main-gray);
+                user-select: none;
+
+                &.app-name{
+                    font-family: "Michroma", sans-serif;
+                    font-size: 16px;
+                    color: var(--main-blue);
+                }
+            }
+        }
+
+        .nav-btns{
+            display: flex;
+            align-items: center;
+            gap: 18.98px;
+
+            .right-btn{
+                width: 16px;
+                height: 16px;
+                user-select: none;
+            }
+
+            .sign-btn {
+                padding: 4px 8px;
+                border: 1px solid var(--main-blue);
+                border-radius: 6px;
+                background: transparent;
+                color: var(--main-blue);
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+
+                &:hover {
+                    background-color: #f4f4f4;
+                }
+            }
+        }  
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar{
+
+        nav{
+
+            .menu{
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,92 @@
+:root{
+  --main: #111827;
+  --main-light: #f5f5f5;
+  --main-red: #E53935;
+  --main-gray: #9ca3af;
+  --main-blue: #2563EB;
+  --acc-gray: #6B7280;
+
+  --border: #f0f0f0;
+  --border-dark: #ececec;
+  --border-main: #e2e8f0;
+
+  --font-light: clamp(0.875em, calc(0.813em + 0.208vw), 1.000em);
+  --font-lightest: clamp(0.750em, calc(0.688em + 0.208vw), 0.875em);
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000000;
+  height: 100%;
+  min-height: 100vh;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea{
+  resize: none;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 1px solid rgb(195, 195, 195);
+  outline-offset: 1px;
+  border-radius: 4px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a{
+  text-decoration: none;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  background: none;
+  &:hover{
+    opacity: 90%;
+  }
+}

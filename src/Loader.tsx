@@ -1,0 +1,15 @@
+import './Loader.scss'
+
+function Loader() {
+
+  return (
+    <>
+        <div className='loader-overlay'>
+            <div className='loader-spinner' />
+        </div>
+    </>
+  )
+
+}
+
+export default Loader

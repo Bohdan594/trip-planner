@@ -1,0 +1,245 @@
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+}
+
+.skel {
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.account-skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+
+    .header-skel {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .skel-title {
+            height: 28px;
+            width: 160px;
+        }
+
+        .skel-subtitle {
+            height: 14px;
+            width: 260px;
+        }
+    }
+
+    .main-skel {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .manage-skel {
+            box-shadow: 0 0 0 1px rgba(229, 231, 235, 0.35), 0 6px 20px rgba(15, 23, 42, 0.06);
+            border-radius: 8px;
+        
+            .part-skel {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2rem 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #f0f0f0;
+                }
+
+                .left-skel {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    .skel-circle {
+                        width: 54px;
+                        height: 54px;
+                        border-radius: 50%;
+                        flex-shrink: 0;
+                    }
+                
+                    .info-skel {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+
+                        .skel-head {
+                            height: 14px;
+                            width: 130px;
+                        }
+
+                        .skel-info {
+                            height: 12px;
+                            width: 200px;
+                        }
+                    }
+                }
+
+                .skel-btn {
+                    height: 34px;
+                    width: 120px;
+                    border-radius: 5px;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        .stay-skel {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 2rem 1rem;
+            box-shadow: 0 0 0 1px rgba(229, 231, 235, 0.35), 0 6px 20px rgba(15, 23, 42, 0.06);
+            border-radius: 8px;
+
+            .skel-circle {
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                flex-shrink: 0;
+            }
+
+            .info-skel {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                flex: 1;
+
+                .skel-head {
+                    height: 14px;
+                    width: 200px;
+                }
+
+                .skel-info {
+                    height: 12px;
+                    width: 100%;
+
+                    &--short {
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .account-skeleton {
+        .main-skel {
+            .manage-skel {
+                .part-skel {
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 2rem;
+
+                    .left-skel {
+                        display: flex;
+                        align-items: center;
+
+                        .skel-circle {
+                            width: 54px;
+                            height: 54px;
+                        }
+                    }
+
+                    .skel-btn {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .stay-skel{
+                .left-skel{
+                    .skel-circle{
+                        width: 54px;
+                        height: 54px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .account-skeleton {
+        .main-skel {
+            .manage-skel {
+                .part-skel {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 1rem;
+
+                    .left-skel {
+                        .skel-circle{
+                            width: 46px;
+                            height: 46px;
+                        }
+                    }
+
+                    .skel-btn {
+                        height: 34px;
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 668px) {
+    .account-skeleton {
+        .main-skel {
+            .manage-skel {
+                .part-skel {
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 2rem;
+
+                    .left-skel {
+                        display: flex;
+                        align-items: center;
+
+                        .skel-circle{
+                            width: 46px;
+                            height: 46px;
+                        }
+                    }
+
+                    .skel-btn {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .account-skeleton {
+        .main-skel {
+            .manage-skel {
+                .part-skel {
+                    .left-skel {
+                        .skel-circle{
+                            width: 44px;
+                            height: 44px;
+                        }
+                    }
+                }
+            }
+            .stay-skel{
+                .left-skel{
+                    .skel-circle{
+                        width: 44px;
+                        height: 44px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+.trip{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+    user-select: none;
+    cursor: pointer;
+    color: var(--main);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .departure{
+        background: #f7f8fc;
+        border-radius: 20px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        box-shadow:
+            inset 0 2px 6px rgba(255,255,255,.9),
+            inset 0 -2px 8px rgba(0,0,0,.05);
+
+        .city{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .head{
+                font-size: 0.875em;
+                color: var(--acc-gray);
+            }
+
+            .place{
+                font-size: 1.1em;
+                font-weight: 600;
+            }
+        }
+
+        .status{
+            font-size: 0.75em;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 50px;
+            user-select: none;
+
+            &.public{
+                color: #16A34A;
+                background-color: #DCFCE7;
+            }
+
+            &.private{
+                color: #EA580C;
+                background-color: #FFEDD5;
+            }
+        }
+    }
+
+    .cities{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        p{
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 0.875em;
+            font-weight: 500;
+            background: rgba(94, 234, 212, 0.18);
+            color: #115e59;
+
+            &.more-count{
+                background: #DBEAFE;
+                color: #2563EB;
+            }
+        }
+    }
+
+    .statistic{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+
+        .stat-part{
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            background: #f7f8fc;
+            border-radius: 20px;
+            padding: 1rem;
+            box-shadow:
+                inset 0 2px 6px rgba(255,255,255,.9),
+                inset 0 -2px 8px rgba(0,0,0,.05);
+
+            .head{
+                font-size: 0.875em;
+                color: var(--acc-gray);
+            }
+
+            .num{
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .trip{
+        .statistic {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

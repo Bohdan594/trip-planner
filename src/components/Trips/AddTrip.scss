@@ -1,0 +1,56 @@
+.trip-head{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    user-select: none;
+
+    .add-trip{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p{
+            font-size: 0.8em;
+            font-weight: 300;
+            color: var(--main-gray);
+        }
+
+        button {
+            padding: 10px 16px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--main-light);
+            background: #2563EB;
+            border: none;
+            border-radius: 12px;
+        }
+    }
+
+    .types{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        p {
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #F3F4F6;
+            color: #6B7280;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all .2s ease;
+
+            &:hover {
+                background: #E5E7EB;
+                color: #374151;
+            }
+
+            &.active {
+                background: #EDE9FE;
+                color: #7C3AED;
+                cursor: default;
+            }
+        }
+    }
+}

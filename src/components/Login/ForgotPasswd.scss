@@ -1,0 +1,90 @@
+.write-email{
+    max-width: 480px;
+    margin-inline: auto;
+
+    .txt-side{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        margin-bottom: 1rem;
+        color: var(--main);
+
+        h2{
+            font-size: clamp(1.250em, calc(1.000em + 0.833vw), 1.750em);
+        }
+
+        .txt-part{
+            font-size: var(--font-light);
+
+            span{
+                font-style: italic;
+                font-weight: 600;
+                color: #E53935;
+            }
+        }  
+    }
+
+    
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &.loading {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            label{
+                color: var(--main);
+                font-size: 0.875em;
+            }
+
+            input{
+                color: var(--main);
+                border: 1px solid var(--border-dark);
+                font-size: 0.875em;
+                border-radius: 20px;
+                padding: 10px;
+                outline: none;
+            }
+        }
+
+        .check-email{
+            font-size: 0.875em;
+            color: #16a34a;
+            margin-inline: auto;
+        }
+
+        .error{
+            color: var(--main-red);
+            font-size: 0.875em;
+            margin-inline: auto;
+        }
+
+        button{
+            margin-top: 1rem;
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 1em;
+            background-color: #030213;
+            color: var(--main-light);
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .write-email{
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+}

@@ -1,0 +1,36 @@
+.verification {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--main);
+    text-align: center;
+    width: 100%;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        h2 {
+            color: #16a34a;
+            font-size: clamp(1.250em, calc(1.000em + 0.833vw), 1.750em);
+        }
+
+        p {
+            font-size: var(--font-light);
+        }
+
+        button {
+            width: 100%;
+            margin-top: 1rem;
+            background-color: #030213;
+            color: var(--main-light);
+            border-radius: 20px;
+            padding: 10px;
+        } 
+    }
+    
+}

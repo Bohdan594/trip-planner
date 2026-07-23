@@ -1,0 +1,57 @@
+.auth-error-banner {
+    background: #fdecea;
+    color: #b3261e;
+    padding: 8px 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.main-app{
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    overflow: auto;
+    min-height: 0;
+
+    .outlet-wrapper {
+        flex: 1;
+        min-width: 0;
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+        overflow: auto;
+
+        overflow-y: auto;
+        flex: 1;
+        min-width: 0;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--border-main);
+            border-radius: 4px;
+
+            &:hover {
+                background: var(--main-gray);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main-app{
+
+        .outlet-wrapper {
+            padding: 0;
+            padding-top: 2rem;
+            padding-bottom: 2rem; 
+        }
+    }
+}
