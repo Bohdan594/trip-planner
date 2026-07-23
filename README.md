@@ -19,3 +19,4 @@
 - 🟢 Node.js
 - 🚂 Express.js
 - 📘 TypeScript
+- 🗄️ Supabase
